@@ -11,13 +11,12 @@ metadata:
     nginx.ingress.kubernetes.io/canary-by-header-value: "app1"
 spec:
   rules:
-  - host: example.com
-    http:
+  - http:
       paths:
       - path: /app
         pathType: Prefix
         backend:
           service:
-            name: app-1-svc
+            name: app-1
             port:
               number: 8080
